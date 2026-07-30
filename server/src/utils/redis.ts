@@ -13,7 +13,7 @@ export async function connectRedis() {
         await redis.connect();
         console.log("Redis connected");
     }
-    catch (err: any) {
+    catch (err: unknown) {
         console.log("Redis connection error: ", err);
     }
 }
