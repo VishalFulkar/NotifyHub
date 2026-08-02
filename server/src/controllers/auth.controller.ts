@@ -103,7 +103,7 @@ export async function logout(req: Request, res: Response) {
 }
 
 export async function getMe(req: Request, res: Response){
-    const { password_hash, ...safeUser } = req.user!;
+    const { password_hash: _password_hash, ...safeUser } = req.user!;
     return res.status(200).json({
         message: "User fetched successfully",
         user: safeUser,
